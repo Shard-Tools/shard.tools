@@ -1,6 +1,8 @@
 # Shard Tools
 
-Privacy-first browser tools that process your files locally.
+Privacy-first browser tools for PDFs, images, developers, and everyday tasks.
+
+**Process files locally in your browser. No uploads required.**
 
 🌐 https://shard.tools
 
@@ -8,18 +10,17 @@ Privacy-first browser tools that process your files locally.
 
 Most online file tools upload your files to a server.
 
-Shard Tools is designed differently:
+Shard Tools takes a local-first approach:
 
 - 🔒 Files are processed locally in your browser
-- 🚫 No file uploads required
+- 🚫 No upload required for supported tools
 - ⚡ Fast browser-based processing
-- 🛠️ PDF, image, developer, and utility tools
+- 🛡️ Privacy-first by design
 - 🌐 Works directly in your browser
 
 ## Tools
 
 ### PDF
-
 - Merge PDF
 - Split PDF
 - Rotate PDF
@@ -28,11 +29,10 @@ Shard Tools is designed differently:
 - PDF to JPG
 - JPG to PDF
 - PDF to PNG
-- PDF to text
+- PDF to Text
 - PDF to Markdown
 
 ### Images
-
 - JPG to PNG
 - PNG to JPG
 - JPG to WebP
@@ -42,20 +42,19 @@ Shard Tools is designed differently:
 - Image cropping
 
 ### Developer
-
-- JSON formatter
+- JSON Formatter
 - JSON to CSV
 - JSON to XML
-- Base64 encoder/decoder
-- JWT decoder
-- UUID generator
-- Hash generator
+- Base64 Encoder / Decoder
+- JWT Decoder
+- UUID Generator
+- Hash Generator
 
 ## Privacy
 
 Shard Tools is built around local-first processing.
 
-Whenever possible, processing happens directly inside your browser rather than uploading your files to a remote server.
+Whenever possible, files are processed directly inside your browser rather than uploaded to a remote server.
 
 ## Website
 
