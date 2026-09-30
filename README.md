@@ -1,133 +1,64 @@
-# Shard Tools
+# 🔧 Shard Tools
 
-Privacy-first browser tools for PDFs, images, developer data, text, calculations, documents, and everyday tasks.
+Free browser-local tools for PDFs, images, developer data, text, calculations, documents, and everyday tasks, with optional MCP support for AI assistants.
 
-**Supported file tools process files locally in your browser without uploads.**
+**Supported browser file tools process files on your device without uploading them for processing.**
 
 [Visit Shard Tools](https://shard.tools/)
 
-## Why Shard Tools?
+## 🔒 Why Shard Tools?
 
-Most online file utilities require users to upload personal files to a remote server. Shard Tools takes a local-first approach:
+- Supported browser file workflows run locally on your device
+- No Shard Tools account required for browser tools
+- Free browser utilities
+- Desktop and mobile browser support
+- Processing boundaries and limitations explained on individual tool pages
+- Privacy claims you can inspect using your browser’s Network panel
 
-- Files are processed locally for supported tools
-- No account is required
-- Results are generated directly in the browser
-- Tools work on desktop and mobile browsers
-- Privacy claims can be independently inspected
+## 🧰 Tools
 
-## Tools
+### 📄 PDF
+Merge, split, rotate, reorder, delete, and extract pages. Convert PDFs to images, text, or Markdown; create PDFs from images; and attempt compression to file-size targets.
 
-### PDF
+Compression results depend on the source document. A target size is not guaranteed.
 
-- Merge, split, rotate, and reorder PDF pages
-- Delete or extract PDF pages
-- Convert PDFs to JPG, PNG, text, or Markdown
-- Convert images to PDF
-- Compress PDFs to specific file-size targets
-- Create, organize, and inspect documents
+### 🖼️ Images
+Convert supported image formats, compress to size targets, resize to exact dimensions, crop, remove backgrounds, and prepare passport, visa, profile, and application photos.
 
-### Images
+Format support varies by tool and browser. Photo sizing does not certify compliance with official requirements.
 
-- Convert between JPG, PNG, WebP, AVIF, BMP, HEIC, and other formats
-- Compress images to specific file-size targets
-- Resize images to exact pixel dimensions
-- Crop images and create circular crops
-- Prepare passport, visa, profile, and application photos
-- Create banners and other fixed-size graphics
+### 💻 Developer and data
+Format, validate, compare, escape, and convert JSON. Work with CSV, XML, YAML, Base64, binary, hexadecimal, JWTs, UUIDs, hashes, CSS, and SQL.
 
-### Developer and data
+Convert multiple CSV files to Markdown or text, with separate outputs or a merged file.
 
-- Format, validate, compare, escape, and convert JSON
-- Convert between JSON, CSV, XML, and YAML
-- Encode and decode Base64, Base32, binary, and hexadecimal data
-- Decode JWTs
-- Generate UUIDs and hashes
-- Format CSS, SQL, and other structured text
+### 🧮 Calculators and documents
+Explore finance, business, construction, measurement, and unit-conversion tools. Create invoices, estimates, quotes, credit notes, and other practical documents.
 
-### Calculators and generators
+[Browse the complete directory](https://shard.tools/)
 
-- Finance and business calculators
-- Construction and measurement calculators
-- Unit converters
-- Invoice, estimate, quote, and credit-note generators
-- Text and data generators
+## 🤖 MCP for AI assistants
 
-These are representative tools. Browse the complete directory at [shard.tools](https://shard.tools/).
+Shard Tools provides an MCP endpoint for tool discovery, deterministic calculations, and selected Edge Assisted file actions.
 
-## Privacy
+**Browser-local and Edge Assisted are different processing modes:**
+- Browser file tools process supported files on your device.
+- Edge Assisted MCP file actions send file bytes to Cloudflare for that request.
 
-Shard Tools is built around browser-local processing. Supported file tools use browser APIs to decode, transform, encode, preview, and download results without sending the selected file to Shard Tools.
+Capabilities, formats, and limits vary by action. Scanned PDFs need OCR elsewhere, and compression does not guarantee a target size.
 
-The website may still download application code, fonts, advertisements, directory badges, optional processing models, and other page resources. These requests are separate from transmitting a selected file.
+[Read the MCP setup guide](https://shard.tools/guides/install-shard-tools-mcp)
 
-Read the full [privacy policy](https://shard.tools/privacy).
+## ✅ Privacy and verification
 
-## Privacy proof
+The website downloads application code, page resources, and some third-party resources. Downloading these resources is distinct from uploading a selected file, but local file processing does not mean the website makes no network requests.
 
-The [Shard Tools Privacy Proof](https://shard.tools/privacy-proof) performs a real 200x200 image resize while measuring data-capable browser requests immediately before and after processing.
+[Privacy Proof](https://shard.tools/privacy-proof) demonstrates an image resize and measures data-capable browser requests. Inspect the browser Network panel yourself; the on-page measurement is not a complete security audit.
 
-It distinguishes local file processing from ordinary page downloads and discloses third-party services. Visitors can run the built-in sample or select their own image and independently verify the result using the browser Network panel.
+[Privacy policy](https://shard.tools/privacy) · [200×200 image resizer](https://shard.tools/tools/resize-image-to-200x200)
 
-The related [200x200 image resizer](https://shard.tools/tools/resize-image-to-200x200) provides crop-to-fill and fit-with-background modes without stretching the source image.
+## 💬 Feedback and official links
 
-## Local development
+Found a problem? Send the tool URL and reproduction steps to [support@shard.tools](mailto:support@shard.tools). Avoid sending sensitive source files.
 
-### Requirements
-
-- Node.js 22.13.0 or newer
-- npm
-
-### Setup
-
-1. Clone the repository with `git clone https://github.com/Shard-Tools/shard.tools.git`.
-2. Enter the project directory with `cd shard.tools`.
-3. Install dependencies with `npm install`.
-4. Start the development server with `npm run dev`.
-5. Open the local address displayed in the terminal.
-
-## Tests and build
-
-- Run the complete test suite with `npm test`.
-- Create a production build with `npm run build`.
-- Run the linter with `npm run lint`.
-
-## Deployment
-
-The production application is deployed to Cloudflare Workers.
-
-Run `npm run deploy:cloudflare` from an authenticated Cloudflare Wrangler environment with access to the correct account and Worker.
-
-## Project structure
-
-- `app/` - pages, routes, shared interfaces, and tool runners
-- `src/engines/` - browser-local processing engines
-- `registry/tools/` - tool definitions, metadata, and explanatory content
-- `tests/` - unit and rendered-page tests
-- `public/` - static assets and locally served runtime files
-- `build/` - registry, content, and build-generation scripts
-- `docs/` - implementation notes and project documentation
-
-## Contributing
-
-Bug reports and focused improvement suggestions are welcome through [GitHub Issues](https://github.com/Shard-Tools/shard.tools/issues).
-
-Before submitting a code change:
-
-1. Install the project dependencies.
-2. Run `npm test`.
-3. Run `npm run lint`.
-4. Explain the behavior changed and how it was verified.
-
-## Official links
-
-- Website: [shard.tools](https://shard.tools/)
-- Privacy proof: [shard.tools/privacy-proof](https://shard.tools/privacy-proof)
-- X: [@Shard_Tools](https://x.com/Shard_Tools)
-- Email: support@shard.tools
-
-## License
-
-Shard Tools is released under the [MIT License](LICENSE).
-
-Copyright (c) 2026 Roshan Dixit, trading as Shard Tools.
+[Website](https://shard.tools/) · [Guides](https://shard.tools/guides) · [GitHub](https://github.com/Shard-Tools) · [@Shard_Tools](https://x.com/Shard_Tools)
